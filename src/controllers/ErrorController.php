@@ -1,7 +1,7 @@
 <?php
 
 require_once 'AppController.php';
-require_once __DIR__.'/../models/Post.php';
+//require_once __DIR__.'/../models/Post.php';
 
 class ErrorController extends AppController
 {   

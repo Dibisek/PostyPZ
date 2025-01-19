@@ -31,7 +31,7 @@ button.input-text {
 
 
 form{
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -50,7 +50,7 @@ form{
 form > a {
     text-decoration: none;
     text-align: center;
-    width: 40%;
+    width: 60%;
     font-size: 7 px;
     color: #ffffff;
     margin-bottom: 1em;
@@ -77,12 +77,12 @@ form >a > span{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 30vw;
+    width: 25vw;
 
 }
 
 img {
-    width: 30vw;
+    width: 20vw;
 }
 
 
@@ -91,6 +91,8 @@ img {
     text-align: center;
     font-family: "Kdam Thmor Pro";
     text-shadow: #97AE6E 1px 1px 1px;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
 }
 
 .llabel {

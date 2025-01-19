@@ -17,10 +17,9 @@
 
 <body id="login">
     <div class="base-container-login">
+        <img src="/img/logo.svg" alt="logo alt">
         <div class="login-container">
-            
-            <img src="/img/logo3.png" alt="logo alt">
-
+            <h1 class="hlabel">Create account</h1>
             <form action="createaccount" method="POST">
                 <span class="messages">
                     <?php
@@ -31,11 +30,14 @@
                         }
                     ?>
                 </span>
-
+                <label for="username" class="llabel">Username</label>
                 <input name="username" type="text" placeholder="Username" class="input-text">
+                <label for="email" class="llabel">Email</label>
                 <input name="email" type="email" placeholder="Email" class="input-text">
+                <label for="password" class="llabel">Password</label>
                 <input name="password" type="password" placeholder="Password" class="input-text">
-                <input name="conf_password" type="password" placeholder="Repete password" class="input-text">
+                <label for="conf_password" class="llabel">Repeat password</label>
+                <input name="conf_password" type="password" placeholder="Repeat password" class="input-text">
                 <button type="submit" class="input-text">Confirm</button>
                 <a href="login">Have an account? <span>Login</span></a>
 

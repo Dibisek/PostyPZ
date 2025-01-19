@@ -14,10 +14,9 @@
 
 <body id="login">
     <div class="base-container-login">
+        <img src="/img/logo.svg" alt="logo alt">
         <div class="login-container">
-            
-            <img src="/img/logo3.png" alt="logo alt">
-
+            <h1 class="hlabel">Sign in</h1>
             <form action="login" method="POST">
                 <span class="messages">
                     <?php
@@ -29,7 +28,9 @@
                     ?>
 
                 </span>
+                <label for="email" class="llabel">Email</label>
                 <input name="email" type="text" placeholder="email" class="input-text">
+                <label for="password" class="llabel">Password</label>
                 <input name="password" type="password" placeholder="password" class="input-text">
                 <button type="submit" class="input-text">Login</button>
                 <a href="createaccount"> Don't have an account? <span>Create account</span></a>

@@ -33,7 +33,7 @@ if(isset($_SESSION['user'])){
     Routing::get('mainpage', 'PostController');
     // Routing::get('postpage', 'PostController');
     // Routing::post('addpost', 'PostController');
-    // Routing::get('logout','SecurityController');
+    Routing::get('logout','SecurityController');
     // Routing::get('myprofile','UserController');
     // Routing::post('adddetails','UserController');
     // Routing::post('changeusername','UserController');

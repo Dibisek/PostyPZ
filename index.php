@@ -3,7 +3,7 @@
 
 require_once 'src/controllers/DefaultController.php';
 require_once 'src/controllers/SecurityController.php';
-// require_once 'src/controllers/PostController.php';
+require_once 'src/controllers/PostController.php';
 // require_once 'src/controllers/RatingController.php';
 // require_once 'src/controllers/BookmarkController.php';
 // require_once 'src/controllers/CategoryController.php';
@@ -30,7 +30,7 @@ function isAdmin() : bool{
 
 
 if(isset($_SESSION['user'])){
-    // Routing::get('mainpage', 'PostController');
+    Routing::get('mainpage', 'PostController');
     // Routing::get('postpage', 'PostController');
     // Routing::post('addpost', 'PostController');
     // Routing::get('logout','SecurityController');

@@ -38,7 +38,7 @@ class Validator
             return $errors;
         }
     
-        return true;
+        return $errors;
     }
     
     public function isEmpty(string $input) {

@@ -87,11 +87,9 @@ class PostRepository extends Repository
 
     public function getPosts(): array
     {
-
         $result = [];
 
         $stmt = $this->database->connect()->prepare('
-
             SELECT
                 posts.*,
                 users.username
@@ -100,8 +98,7 @@ class PostRepository extends Repository
             LEFT JOIN
                 users
             ON
-                posts.id_user_owner = users.id_user;
-
+                posts.id_user_owner = CAST(users.id_user AS INTEGER);
         ');
 
         $stmt->execute();
@@ -114,15 +111,11 @@ class PostRepository extends Repository
                 $post['username'],
                 $post['title'],
                 $post['description'],
-
-
                 $post['image'],
-
-
                 $post['number_of_servings'],
                 $post['created_at'],
                 $post['like'],
-                $post['dislike'],
+                $post['dislike']
             );
         }
         return $result;

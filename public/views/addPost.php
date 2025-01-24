@@ -7,8 +7,8 @@
 </head>
 <body>
     <h1>Create or Edit Post</h1>
-    <form action="/post/save" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="id_post" value="<?php echo isset($post) ? $post->getIdPost() : ''; ?>">
+    <form action="addpost" method="POST" enctype="multipart/form-data">
+        <!-- <input type="hidden" name="id_post" value="<?php echo isset($post) ? $post->getIdPost() : ''; ?>"> -->
 
         <div>
             <label for="title">Title:</label>
@@ -28,16 +28,6 @@
             <?php endif; ?>
         </div>
 
-        <div>
-            <label for="author">Author:</label>
-            <select id="author" name="id_user_owner">
-                <?php foreach ($users as $user): ?>
-                    <option value="<?php echo $user->getIdUser(); ?>" <?php echo (isset($post) && $post->getIdUserOwner() === $user->getIdUser()) ? 'selected' : ''; ?>>
-                        <?php echo htmlspecialchars($user->getUsername()); ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
-        </div>
 
         <button type="submit">Save</button>
     </form>

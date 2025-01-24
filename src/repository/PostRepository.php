@@ -42,7 +42,6 @@ class PostRepository extends Repository
             $post['image'],
 
 
-            $post['number_of_servings'],
             $post['created_at'],
             $post['like'],
             $post['dislike'],
@@ -62,12 +61,11 @@ class PostRepository extends Repository
             image,
 
 
-            number_of_servings,
             created_at,
             "like",
             dislike
             )
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         ');
 
         $stmt->execute([
@@ -112,7 +110,6 @@ class PostRepository extends Repository
                 $post['title'],
                 $post['description'],
                 $post['image'],
-                $post['number_of_servings'],
                 $post['created_at'],
                 $post['like'],
                 $post['dislike']
@@ -161,7 +158,6 @@ class PostRepository extends Repository
                 $post['image'],
 
 
-                $post['number_of_servings'],
                 $post['created_at'],
                 $post['like'],
                 $post['dislike'],
@@ -281,7 +277,6 @@ class PostRepository extends Repository
                 $post['image'],
 
 
-                $post['number_of_servings'],
                 $post['created_at'],
                 $post['like'],
                 $post['dislike'],

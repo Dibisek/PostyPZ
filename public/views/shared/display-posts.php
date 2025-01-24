@@ -5,24 +5,24 @@
 
         <div class="post-header">
             <div class="user-avatar">
-                <img src="../public/uploads/<?= $post->getImage() ?>" alt="user-img">
+                <img src="../public/uploads/user-default.jpg" alt="user-img">
             </div>
             <span class="username"><?$post->getUserOwner()?></span>
         </div>
         <div class="post-content">
-            <img src="/img/post.jpg" alt="post-img">
+            <img src="../public/uploads/<?= $post->getImage() ?>" alt="post-img">
             <p class="post-text"><?= $post->getTitle() ?>  </p>
             <p class="post-text"><?= $post->getDescription() ?> </p>
         </div>
-    </div>
-        <?
-            if(isAdmin()){
-                echo '
-                        <a href="/deletepost?id='.$post->getIdPost().'" class="button">Delete That Post</a>
-                ';
-            }
+        <div>
+            <?
+                if(isAdmin()){
+                    echo '
+                            <a href="/deletepost?id='.$post->getIdPost().'" class="button">Delete That Post</a>
+                    ';
+                }
 
-        ?>
+            ?>
         </div>
         <div class="post-footer">
             <div class="post-stats">

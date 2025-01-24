@@ -17,7 +17,7 @@
                 </div>
                 <div class="user-info">
                     <div class="user-avatar">
-                        <img src="/img/user.svg" alt="user-img">
+                        <img src="../public/uploads/user-default.jpg" alt="user-img">
                     </div>
                     <span class="username">Username</span>
                 </div>
@@ -26,111 +26,7 @@
                 </div>
             </section>
             <section class="posts-feed">
-
             <?php include_once __DIR__ . '/shared/display-posts.php' ?>
-            
-                <div class="post">
-                    <div class="post-header">
-                        <div class="user-avatar">
-                            <img src="/img/user.svg" alt="user-img">
-                        </div>
-                        <span class="username">Username</span>
-                        <!-- <span class="post-date">12.12.2021</span> -->
-                    </div>
-                    <div class="post-content">
-                        <img src="/img/post.jpg" alt="post-img">
-                        <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
-                    </div>
-                    <div class="post-footer">
-                        <div class="post-stats">
-                            <div class="main-stats">
-                                <div class="comment-count">
-                                    <i class="fas fa-comment"></i>
-                                    <span>12</span>
-                                </div>
-                                <div class="like-count">
-                                    <i class="fas fa-thumbs-up"></i>
-                                    <span>12</span>
-                                </div>
-                                <div class="dislike-count">
-                                    <i class="fas fa-thumbs-down"></i>
-                                    <span>12</span>
-                                </div>
-                            </div>
-                            <div class="bookmark">
-                                <i class="fas fa-bookmark"></i>
-                            </div>
-                        </div>  
-                    </div>
-                </div>
-                <div class="post">
-                    <div class="post-header">
-                        <div class="user-avatar">
-                            <img src="/img/user.svg" alt="user-img">
-                        </div>
-                        <span class="username">Username</span>
-                        <!-- <span class="post-date">12.12.2021</span> -->
-                    </div>
-                    <div class="post-content">
-                        <img src="/img/post.jpg" alt="post-img">
-                        <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
-                    </div>
-                    <div class="post-footer">
-                        <div class="post-stats">
-                            <div class="main-stats">
-                                <div class="comment-count">
-                                    <i class="fas fa-comment"></i>
-                                    <span>12</span>
-                                </div>
-                                <div class="like-count">
-                                    <i class="fas fa-thumbs-up"></i>
-                                    <span>12</span>
-                                </div>
-                                <div class="dislike-count">
-                                    <i class="fas fa-thumbs-down"></i>
-                                    <span>12</span>
-                                </div>
-                            </div>
-                            <div class="bookmark">
-                                <i class="fas fa-bookmark"></i>
-                            </div>
-                        </div>  
-                    </div>
-                </div>
-                <div class="post">
-                    <div class="post-header">
-                        <div class="user-avatar">
-                            <img src="/img/user.img" alt="user-img">
-                        </div>
-                        <span class="username">Username</span>
-                        <!-- <span class="post-date">12.12.2021</span> -->
-                    </div>
-                    <div class="post-content">
-                        <img src="/img/post.jpg" alt="post-img">
-                        <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
-                    </div>
-                    <div class="post-footer">
-                        <div class="post-stats">
-                            <div class="main-stats">
-                                <div class="comment-count">
-                                    <i class="fas fa-comment"></i>
-                                    <span>12</span>
-                                </div>
-                                <div class="like-count">
-                                    <i class="fas fa-thumbs-up"></i>
-                                    <span>12</span>
-                                </div>
-                                <div class="dislike-count">
-                                    <i class="fas fa-thumbs-down"></i>
-                                    <span>12</span>
-                                </div>
-                            </div>
-                            <div class="bookmark">
-                                <i class="fas fa-bookmark"></i>
-                            </div>
-                        </div>  
-                    </div>
-                </div>
             </section>
             <section class="rightbar">
                 <img class="logo" src="/img/logo.svg" alt="logo">

@@ -14,6 +14,16 @@
             <p class="post-text"><?= $post->getTitle() ?>  </p>
             <p class="post-text"><?= $post->getDescription() ?> </p>
         </div>
+    </div>
+        <?
+            if(isAdmin()){
+                echo '
+                        <a href="/deletepost?id='.$post->getIdPost().'" class="button">Delete That Post</a>
+                ';
+            }
+
+        ?>
+        </div>
         <div class="post-footer">
             <div class="post-stats">
                 <div class="main-stats">

@@ -15,7 +15,7 @@ class UserController extends AppController
     private $message = [];
     private $postRepository;
     private $userRepository;
-    private $userDetailsRepository;
+    //private $userDetailsRepository;
     private $sessionInfo;
     private $validator;
 
@@ -24,7 +24,7 @@ class UserController extends AppController
         parent::__construct();
         $this->sessionInfo = new SessionInfo();
         $this->validator = new Validator();
-        //$this->postRepository = new PostRepository();
+        $this->postRepository = new PostRepository();
         $this->userRepository = new UserRepository();
         //$this->userDetailsRepository = new UserDetailsRepository();
     }
@@ -36,8 +36,8 @@ class UserController extends AppController
         $id = $this->sessionInfo->getIdUserFromSession();
         $posts = $this->postRepository->getPostsByIdUserOwner($id);
         $user = $this->userRepository->getUserFromIdUser($id);
-        $user_details = $this->userDetailsRepository->getUserDetails($id);
-        $this -> render('my-profile',['posts' => $posts, 'user'=>$user, 'userdetails' => $user_details] );
+        //$user_details = $this->userDetailsRepository->getUserDetails($id);
+        $this -> render('myprofile',['posts' => $posts, 'user'=>$user] );
     }
 
     // public function adddetails() 

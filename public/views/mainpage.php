@@ -22,11 +22,7 @@
                     <span class="username">Username</span>
                 </div>
                 <div class="create-post">
-                    <textarea name="post" id="post" rows="10" placeholder="What's on your mind?"></textarea>
-                    <div class="post-controls">
-                        <i class="fas fa-image"></i>
-                        <button class="post-button">Post</button>
-                    </div>
+                        <a href="addpost"><button class="post-button">Add Post</button></a>
                 </div>
             </section>
             <section class="posts-feed">

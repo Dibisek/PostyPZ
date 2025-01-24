@@ -91,16 +91,11 @@
     background-color: #55623E;
 }
 
-.post-controls {
-    width: calc(100% - 1em);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 0.5em .25em;
+.create-post a {
+    width: 100%;
 }
 
-.post-controls button {
+.create-post button {
     padding: 0.5em;
     background-color: #84C313;
     border: none;
@@ -108,11 +103,7 @@
     font-family: "Kdam Thmor Pro";
     font-size: 1em;
     letter-spacing: 1.25px;
-}
-
-.post-controls i {
-    font-size: 2em;
-    color: #E4FABE;
+    width: 100%;
 }
 
 /* Middle section */

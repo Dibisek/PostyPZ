@@ -26,6 +26,9 @@
                 </div>
             </section>
             <section class="posts-feed">
+
+            <?php include_once __DIR__ . '/shared/display-posts.php' ?>
+            
                 <div class="post">
                     <div class="post-header">
                         <div class="user-avatar">

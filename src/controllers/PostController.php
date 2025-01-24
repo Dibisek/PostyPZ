@@ -92,7 +92,7 @@ class PostController extends AppController
             //$this->categoryRepository->addCategories($new_post->getIdPost(), $_POST['categories']);
 
             //return $this->postpageFromIdPost($new_post->getIdPost());
-            return $this->render('mainpage', ['messages' => $this->message]);
+            return $this->mainpage();
 
         }
         return $this->render('addPost', ['messages' => $this->message]);       
@@ -118,10 +118,10 @@ class PostController extends AppController
 
     
     public function mainpage() {
-        //$posts = $this->postRepository->getPosts();
+        $posts = $this->postRepository->getPosts();
         //$this->postRepository->getPostsByTitle("test");
-        //$this -> render('mainpage',['posts' => $posts] );
-        $this -> render('mainpage',[]);
+        $this -> render('mainpage',['posts' => $posts] );
+        //$this -> render('mainpage',[]);
     }
     
 

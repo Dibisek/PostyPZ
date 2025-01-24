@@ -96,7 +96,7 @@ class PostRepository extends Repository
             LEFT JOIN
                 users
             ON
-                posts.id_user_owner = CAST(users.id_user AS INTEGER);
+                posts.id_user_owner = CAST(users.id_user AS VARCHAR);
         ');
 
         $stmt->execute();

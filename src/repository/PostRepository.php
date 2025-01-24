@@ -87,23 +87,17 @@ class PostRepository extends Repository
 
     public function getPosts(): array
     {
-        $result = [];
-
         $stmt = $this->database->connect()->prepare('
-            SELECT
-                posts.*,
-                users.username
-            FROM
-                posts
-            LEFT JOIN
-                users
-            ON
-                posts.id_user_owner = CAST(users.id_user AS INTEGER);
+            SELECT posts.*, users.username
+            FROM posts
+            LEFT JOIN users ON posts.id_user_owner = users.id_user
         ');
 
         $stmt->execute();
 
         $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = [];
+
         foreach ($posts as $post) {
             $result[] = new Post(
                 $post['id_post'],
@@ -114,12 +108,14 @@ class PostRepository extends Repository
                 $post['image'],
                 $post['number_of_servings'],
                 $post['created_at'],
-                $post['like'],
-                $post['dislike']
+                #$post['like'],
+                #$post['dislike']
             );
         }
+
         return $result;
     }
+
 
 
 

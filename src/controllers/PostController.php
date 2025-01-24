@@ -71,6 +71,10 @@ class PostController extends AppController
     public function mainpage()
     {
         $posts = $this->postRepository->getPosts();
+            $posts = array_filter($posts, function ($post) {
+            return is_numeric($post->getIdPost());
+        });
+    
         $this->render('mainpage', ['posts' => $posts]);
     }
 

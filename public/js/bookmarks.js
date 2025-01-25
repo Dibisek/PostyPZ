@@ -1,9 +1,9 @@
 const bookmarkButtons = document.querySelectorAll("#bookmark");
 console.log('bookmark0');
 
-    const button = document.querySelector(".bookmark");
+    // const button = document.querySelector(".bookmark");
 
-    button.addEventListener("click", function () {
+    bookmarkButtons.forEach(bookmarkButton => bookmarkButton.addEventListener("click", function () {
         const bookmarkText = this.closest('.bookmark-container').querySelector(".bookmark-text span");
         const container = this.closest(".post-icons-interactive").parentElement;
         const id = container.getAttribute("id");
@@ -22,7 +22,7 @@ console.log('bookmark0');
                     bookmarkText.classList.remove('pressed');
                 }
             });
-    });
+    }));
 
 
 

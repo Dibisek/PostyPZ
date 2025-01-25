@@ -2,3 +2,7 @@ body {
     background-color: #13160E;
     color: white;
 }
+
+.pressed {
+    color: #FB8A22 !important;
+}

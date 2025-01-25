@@ -1,3 +1,6 @@
+<script type="text/javascript" src="./public/js/statistics.js" defer></script>
+<script type="text/javascript" src="./public/js/bookmarks.js" defer></script>
+
 
 
     <?php foreach($posts as $post): ?>
@@ -24,23 +27,45 @@
             }
 
             ?>
+
+        <?php
+            //require_once __DIR__.'/src/repository/PostRepository.php';
+            $this->ratingRepository = new RatingRepository();
+            $this->bookmarkRepository = new BookmarkRepository();
+            
+            $rate = $this->ratingRepository->getRatingScore(getIdUser(), $post->getIdPost());
+            $book = $this->bookmarkRepository ->isBookmarkedByUser(getIdUser(), $post->getIdPost());
+
+        ?>
+
         </div>
         <div class="post-footer">
-            <div class="post-stats">
-                <div class="main-stats">
+            <div class="post-stats" id="<?= $post->getIdPost() ?>">
+                <div class="main-stats post-icons-interactive" >
                 
-                    <div class="like-count">
-                        <i class="fas fa-thumbs-up"></i>
-                        <span><?= $post->getLike() ?></span>
+                    <div class="like-count like">
+                        <i id="thumblike" class="material-symbols-outlined hover <?if($rate == 1){echo 'pressed';} ?>">thumb_up</i> 
+                        <span id="likeNum"><?= $post->getLike() ?> </span>
                     </div>
-                    <div class="dislike-count">
-                        <i class="fas fa-thumbs-down"></i>
-                        <span><?= $post->getDislike() ?></span>
+                    <div class="dislike-count dislike">
+                        <i id="thumbdislike" class="material-symbols-outlined thumb hover <?if($rate == -1){echo 'pressed';}?>">thumb_down</i>
+                        <span id="dislikeNum"><?= $post->getDislike() ?></span>
                     </div>
                 </div>
-                <div class="bookmark">
-                    <i class="fas fa-bookmark"></i>
+
+                <div class="bookmark-container post-icons-interactive">
+
+                    <div class="bookmark-text">
+                        <span id="bookmark-text" class="<?if($book){echo 'pressed';}?>"><?if($book){echo 'Bookmarked';}else{echo 'Bookmark';}?></span>
+                    </div>
+
+                    <div class="bookmark">
+                        <i class="bookmark material-symbols-outlined hover <?if($book){echo 'pressed';}?>" id="bookmark">bookmark</i>
+                    </div>
+            
+               
                 </div>
+
             </div>  
         </div>
     </div>

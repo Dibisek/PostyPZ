@@ -4,6 +4,8 @@ require_once 'AppController.php';
 //require_once __DIR__.'/../models/Post.php';
 //require_once __DIR__.'/../repository/PostRepository.php';
 require_once __DIR__.'/../repository/UserRepository.php';
+require_once __DIR__.'/../repository/RatingRepository.php';
+require_once __DIR__.'/../repository/BookmarkRepository.php';
 //require_once __DIR__.'/../repository/UserDetailsRepository.php';
 require_once __DIR__.'/../services/SessionInfo.php';
 require_once __DIR__.'/../services/Validator.php';
@@ -18,6 +20,8 @@ class UserController extends AppController
     //private $userDetailsRepository;
     private $sessionInfo;
     private $validator;
+    public $ratingRepository;
+    public $bookmarkRepository;
 
     public function __construct()
     {
@@ -26,6 +30,8 @@ class UserController extends AppController
         $this->validator = new Validator();
         $this->postRepository = new PostRepository();
         $this->userRepository = new UserRepository();
+        $this->ratingRepository = new RatingRepository();
+        $this->bookmarkRepository = new BookmarkRepository();
         //$this->userDetailsRepository = new UserDetailsRepository();
     }
 

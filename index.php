@@ -4,8 +4,8 @@
 require_once 'src/controllers/DefaultController.php';
 require_once 'src/controllers/SecurityController.php';
 require_once 'src/controllers/PostController.php';
-// require_once 'src/controllers/RatingController.php';
-// require_once 'src/controllers/BookmarkController.php';
+require_once 'src/controllers/RatingController.php';
+require_once 'src/controllers/BookmarkController.php';
 // require_once 'src/controllers/CategoryController.php';
 //require_once 'src/controllers/AdminController.php';
 
@@ -41,6 +41,16 @@ function isAuthor(string $postid): ?bool
     return false;
 }
 
+function getIdUser(): ?string
+{
+    if(!isset($_SESSION['user'])){
+        return false;
+    }
+    $user = unserialize($_SESSION['user']);
+        return $user->getIdUser();
+}
+
+
 
 if(isset($_SESSION['user'])){
     Routing::get('mainpage', 'PostController');
@@ -52,14 +62,14 @@ if(isset($_SESSION['user'])){
     // Routing::post('changeusername','UserController');
     // Routing::post('changeemail','UserController');
     // Routing::post('changepassword','SecurityController');
-    // Routing::get('bookmarks','BookmarkController');
+    Routing::get('bookmarks','BookmarkController');
     // Routing::post('search', 'PostController');
     // Routing::get('explore', 'CategoryController');
     // Routing::get('categorypage', 'CategoryController');
 
-    // Routing::get('like', 'PostController');
-    // Routing::get('dislike', 'PostController');
-    // Routing::get('bookmarkpost', 'BookmarkController');
+    Routing::get('like', 'PostController');
+    Routing::get('dislike', 'PostController');
+    Routing::get('bookmarkpost', 'BookmarkController');
     // Routing::get('error','DefaultController');
     Routing::get('deletemypost','UserController');
 }

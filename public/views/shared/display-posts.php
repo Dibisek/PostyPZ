@@ -7,7 +7,7 @@
             <div class="user-avatar">
                 <img src="../public/uploads/user-default.jpg" alt="user-img">
             </div>
-            <span class="username"><?$post->getUserOwner()?></span>
+            <span class="username"><?= $post->getUserOwner()?> </span>
         </div>
         <div class="post-content">
             <img src="../public/uploads/<?= $post->getImage() ?>" alt="post-img">
@@ -15,12 +15,13 @@
             <p class="post-text"><?= $post->getDescription() ?> </p>
         </div>
         <div>
-            <?
-                if(isAdmin()){
-                    echo '
-                            <a href="/deletepost?id='.$post->getIdPost().'" class="button">Delete That Post</a>
-                    ';
-                }
+        <?
+        
+            if(isAuthor($post->getIdUserOwner()) && basename($_SERVER['REQUEST_URI']) == "myprofile"){
+                echo '
+                        <a href="/deletemypost?id='.$post->getIdPost().'" class="button">Delete That Post</a>
+                ';
+            }
 
             ?>
         </div>

@@ -40,6 +40,16 @@ class UserController extends AppController
         $this -> render('myprofile',['posts' => $posts, 'user'=>$user] );
     }
 
+    public function deletemypost($id_post) {
+        if ($this->isGet() && isset($_GET['id'])) {
+            $id_post = $_GET['id'];
+            $this->postRepository->deletePost($id_post);
+            $posts = $this->postRepository->getPosts();
+            
+            return $this-> myprofile();
+        }
+    }
+
     // public function adddetails() 
     // {
 

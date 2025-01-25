@@ -7,7 +7,7 @@ require_once 'src/controllers/PostController.php';
 // require_once 'src/controllers/RatingController.php';
 // require_once 'src/controllers/BookmarkController.php';
 // require_once 'src/controllers/CategoryController.php';
-// require_once 'src/controllers/AdminController.php';
+//require_once 'src/controllers/AdminController.php';
 
 require 'Routing.php';
 
@@ -26,6 +26,19 @@ function isAdmin() : bool{
     }
     return false;
 
+}
+
+
+function isAuthor(string $postid): ?bool
+{
+    if(!isset($_SESSION['user'])){
+        return false;
+    }
+    $user = unserialize($_SESSION['user']);
+    if($postid === $user->getIdUser()){
+        return true;
+    }
+    return false;
 }
 
 
@@ -48,11 +61,12 @@ if(isset($_SESSION['user'])){
     // Routing::get('dislike', 'PostController');
     // Routing::get('bookmarkpost', 'BookmarkController');
     // Routing::get('error','DefaultController');
+    Routing::get('deletemypost','UserController');
 }
 
 if(isAdmin()){
     // Routing::get('dislikedposts','AdminController');
-    // Routing::get('deletepost','AdminController');
+    //Routing::get('deletepost','AdminController');
 }
 
 

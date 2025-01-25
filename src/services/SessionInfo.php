@@ -18,6 +18,8 @@ class SessionInfo {
         }
         return unserialize($_SESSION['user'])->getUsername();
     }
+
+
     
 }
 ?>

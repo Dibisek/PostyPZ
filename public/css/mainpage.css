@@ -1,14 +1,15 @@
 .content {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
-    height: 100vh;
     gap: 2em;
     margin: 0 10vw;
 }
 
 .leftbar {
+    position: sticky;
+    top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -120,7 +121,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1em;
-    width: 50vw;
+    width: 30vw;
     border: #97AE6E solid 0.5px;
 }
 
@@ -146,6 +147,26 @@
     width: 100%;
     height: auto;
     margin: 10px 0;
+}
+
+
+.post div:has(a.button) {
+    display: inline-block;
+    width: 100%;
+}
+.post a.button {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    color: #97AE6E;
+    font-family: "Kdam Thmor Pro";
+    font-size: .8em;
+    letter-spacing: 1.25px;
+    text-decoration: none;
+}
+
+.post a.button:hover {
+    color: #84C313;
 }
 
 .post-footer {
@@ -180,6 +201,8 @@
 }
 
 .rightbar {
+    position: sticky;
+    top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

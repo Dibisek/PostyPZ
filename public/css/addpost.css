@@ -1,0 +1,65 @@
+.content h1 {
+    font-size: 2em;
+    margin-bottom: .5em;
+    font-family: "Kdam Thmor Pro";
+    letter-spacing: 1.5px;
+    margin: 5px auto 0;
+}
+
+form {
+    width: calc(100% - 3*10px);
+    margin: 0 10px 10px;
+}
+
+form label {
+    font-size: 1.5em;
+    font-family: "Nokora";
+    margin: 5px auto 0;
+}
+
+form input#title {
+    width: 100%;
+    height: 2em;
+    font-size: 1em;
+    font-family: "Nokora";
+    letter-spacing: 1.5px;
+    margin: 5px auto 10px;
+    background-color: #55623E;
+    color: #E4FABE;
+}
+
+form textarea#description {
+    width: 100%;
+    height: 10em;
+    font-size: 1em;
+    font-family: "Nokora";
+    letter-spacing: 1.5px;
+    margin: 5px auto 10px;
+    background-color: #55623E;
+    color: #E4FABE;
+    resize: vertical;
+}
+
+form input#image {
+    margin: 5px auto 10px;
+    padding: 0.5em;
+    background-color: #55623E;
+    border: none;
+    border-radius: 5px;
+    font-family: "Kdam Thmor Pro";
+    font-size: 1em;
+    letter-spacing: 1.25px;
+    width: calc(100% - 1em);
+}
+
+form button {
+    margin-top: 10px;
+    padding: 0.5em;
+    background-color: #84C313;
+    border: none;
+    border-radius: 5px;
+    font-family: "Kdam Thmor Pro";
+    font-size: 1em;
+    letter-spacing: 1.25px;
+    width: 100%;
+}

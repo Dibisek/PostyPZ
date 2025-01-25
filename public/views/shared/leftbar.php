@@ -7,7 +7,7 @@
         <div class="user-avatar">
             <img src="../public/uploads/user-default.jpg" alt="user-img">
         </div>
-        <span class="username">Username</span>
+        <span class="username"><?= getUsername() ?></span>
     </div>
     <div class="create-post">
             <a href="addpost"><button class="post-button">Add Post</button></a>

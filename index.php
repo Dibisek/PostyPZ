@@ -50,6 +50,17 @@ function getIdUser(): ?string
         return $user->getIdUser();
 }
 
+function getUsername(): ?string
+{
+    if(!isset($_SESSION['user'])){
+        return false;
+    }
+    $user = unserialize($_SESSION['user']);
+        return $user->getUsername();
+}
+
+
+
 
 
 if(isset($_SESSION['user'])){
